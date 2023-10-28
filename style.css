@@ -1,0 +1,279 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+    
+    html {
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+  }
+
+  /* main body */
+
+  body {
+    height: 100vh;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    overflow: hidden;
+    background-image: url("/blob-vector.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  /* header  */
+
+  .main-title {
+    font-size: 36px;
+    color: rgb(113, 60, 88);
+    text-align: center;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-right: auto;
+    text-transform: uppercase;
+  }
+
+  /*  maiin coontainer holding the text output */
+
+  .main{
+    padding-top: 20px;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  /*  */
+  .choicebuttons-container {
+    display: flex; 
+    justify-content: center;
+    margin: 30px;
+  }
+
+  /* containier holding YOU output */
+  .main-scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+/* first main-score; COMPUTER output */
+  .main-score {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(80, 65, 65);
+    background-color: #fff;
+    width: 250px;
+    margin: 15px;
+    padding: 25px 16px;
+    border-radius: 10px;
+    border: 3.5px solid rgb(74, 49, 66);
+  }
+
+  /* second main-score that has computer input */
+  .main-score:first-child {
+    font-size: 20px;
+  }
+
+  /* main-message holds items in its div ***??.. givesoff message in screen */
+  .main_message{
+    color: rgb(194, 46, 46);
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* holds the rock, paper, scissor image  */
+.main-items {
+    display: flex;
+    align-items: center ;
+}
+
+/* selects actual images from main-items div  */
+.main-items img {
+    display: flex;
+    /* padding: 20px; */
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 175px;  
+    background-color: #fff;
+    border-radius: 65px;
+    cursor: pointer;
+    transition: .3s;
+    border: 3.1px rgb(172, 134, 194) solid;
+    box-shadow: 2px 6px 0px #1A9A9D;
+}
+
+/* rock */
+.main-items img:nth-child(1) {
+    width: 140px;
+    height: 135px;
+    margin: 20px;
+}
+
+/* hand */
+.main-items img:nth-child(2) {
+    width: 140px;
+    height: 130px;
+    margin: 20px;
+}
+
+/* scissor */
+.main-items img:nth-child(3) {
+    width: 140px;
+    height: 130px;
+    margin: 30px;
+}
+
+/* hover effec on images */
+
+.main-items img:hover {
+    transform: scale(1.2);
+}
+
+
+/* MEDIA QUERY RESPONSIVENESS  */
+/* works if set them apart individually...  */
+
+/* PHONE USE  */
+
+@media only screen and (max-width: 375px) {
+
+body {
+background-size: cover;
+}
+
+.main-title {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.main-scoreboard {
+  width: 100%;
+}
+
+.main-score {
+  padding: 15px;
+  margin: 10px;
+}
+
+/* rock image  */
+.main-items img:nth-child(1) {
+  width: 80px;
+  height: 80px;
+}
+
+/* hand image  */
+.main-items img:nth-child(2) {
+  width: 80px;
+  height: 80px;
+}
+
+/* scissor image */
+.main-items img:nth-child(3) {
+  width: 80px;
+  height: 80px;
+}
+}
+
+/* TABLET USE  */
+
+@media only screen and (max-width: 820px) {
+
+  body {
+    background-size: cover;
+    }
+  
+  .main-title {
+    margin-top: 38%;
+    font-size: 45px;
+    } 
+      
+    .main-score, .main-score:first-child {
+      width: 40vw;
+      font-size: 25px;
+    }
+  
+    .main_message {
+      font-size: 40px;
+    }
+  
+    /* rock image  */
+    .main-items img:nth-child(1) {
+      width: 170px;
+      height: 170px;
+    }
+  
+  /* hand image  */
+    .main-items img:nth-child(2) {
+      width: 170px;
+      height: 170px;
+    }
+  
+  /* scissor image */
+    .main-items img:nth-child(3) {
+      width: 170px;
+      height: 170px;
+    }
+  
+  }
+  
+   /* DESKTOP USE */
+  
+   @media only screen and (max-width: 1032px) {
+  
+    body {
+      background-size: cover;
+      }
+      
+      .main-title {
+        margin-top: 35%;
+        font-size: 45px;
+      }
+  
+      .main-score, .main-score:first-child {
+        width: 35vw;
+        font-size: 25px;
+      }
+    
+      .main_message {
+        font-size: 45px;
+      }
+  
+      .main-items img { 
+      border-radius: 95px;
+  
+      }
+  
+      /* rock image  */
+    .main-items img:nth-child(1) {
+      width: 180px;
+      height: 180px;
+    }
+  
+  /* hand image  */
+    .main-items img:nth-child(2) {
+      width: 180px;
+      height: 180px;
+    }
+  
+  /* scissor image */
+    .main-items img:nth-child(3) {
+      width: 180px;
+      height: 180px;
+    }
+    
+  }
+
+
+
+
+
